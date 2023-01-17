@@ -1,4 +1,4 @@
-#what's base image?
+# what's base image?
 FROM node:18
 
 # creating directory for the app

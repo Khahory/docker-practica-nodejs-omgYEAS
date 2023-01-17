@@ -85,7 +85,7 @@ for docker-compose.yml
 
 # FOR UP COMPOSE
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 # NOTE
@@ -97,7 +97,7 @@ VOLUMES IS FOR PERSTENCE DATA
 
 # RUN DEVELOPMENT ENVIRONMENT
 ```
-docker-compose -f docker-compose-dev.yml up
+docker compose -f docker-compose-dev.yml up
 ```
 
 
