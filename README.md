@@ -50,3 +50,15 @@ docker network ls
 docker network create NAME_NETWORK
 docker network create mired
 ```
+
+# BUILD IMAGE FROM DOCKERFILE
+```
+docker build -t YOUR_NAME_IMAGE:ANY .
+```
+
+# CREATE CONTAINER WITH NETWORK
+```
+docker create --network NAME_NETWORK IMAGE_NAME
+docker create -p27017:27017 --network mired -e MONGO_INITDB_ROOT_USERNAME=nico -e MONGO_INITDB_ROOT_PASSWORD=password --name monguito mongo
+docker create -p3000:3000 --network mired --name chanchito miapp:1
+``` 
