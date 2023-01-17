@@ -21,11 +21,19 @@ services:
         - MONGO_INITDB_ROOT_USERNAME=nico
         - MONGO_INITDB_ROOT_PASSWORD=password
 
-# basicamente estamos renusiemdo los comandos:
-#docker create -p27017:27017 --network mired -e MONGO_INITDB_ROOT_USERNAME=nico -e MONGO_INITDB_ROOT_PASSWORD=password --name monguito mongo
-#docker create -p3000:3000 --network mired --name chanchito miapp:1
-# en este docker-compose.yml
+    volumes:
+      # where does mongodb store data? (GOOGLE IT)
+      - mongo-data: /data/db # debemos decirle donde sera montando el volumen en el contenedor
 
+      # where does mysql store data? (GOOGLE IT)
+      # mysql -> /var/lib/mysql
 
-# para levantar los contenedores
-# docker-compose up -d
+      # where does postgresql store data? (GOOGLE IT)
+      # postgresql -> /var/lib/postgresql/data
+
+      # where does sqlserver store data? (GOOGLE IT)
+      # sqlserver -> /var/opt/mssql/data
+
+# definir volumenes
+volumes:
+  mongo-data:

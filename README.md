@@ -73,3 +73,21 @@ docker-compose up
 ```
 docker-compose down
 ```
+
+
+# BASICLY WE RESUME THE COMMANDS IN THIS WAY:
+```
+docker create -p27017:27017 --network mired -e MONGO_INITDB_ROOT_USERNAME=nico -e MONGO_INITDB_ROOT_PASSWORD=password --name monguito mongo
+docker create -p3000:3000 --network mired --name chanchito miapp:1
+```
+for docker-compose.yml
+
+
+# FOR UP COMPOSE
+```
+docker-compose up -d
+```
+
+# VOLUMES IS FOR PERSTENCE DATA
+
+
