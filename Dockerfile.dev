@@ -12,4 +12,4 @@ WORKDIR /home/app
 EXPOSE 3000
 
 # when the container launches run the following command
-CMD ["nodemon", "index.js"]
+CMD ["nodemon", "-L", "index.js"]
