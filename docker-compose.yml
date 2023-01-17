@@ -1,0 +1,31 @@
+# camos a construir los contenedores de manera mas vacana
+
+#creado version
+version: '1.0'
+
+#creado servicio (o contenedor)
+services:
+  chanchito:
+    build: .
+    ports:
+      - "3000:3000"
+      - "3001:3001" # si queremos exponer mas puertos
+    links:
+      - monguito # nombre del contenedor
+
+  monguito:
+    image: mongo # nombre de la imagen
+    ports:
+      - "27017:27017"
+    environment:
+        - MONGO_INITDB_ROOT_USERNAME=nico
+        - MONGO_INITDB_ROOT_PASSWORD=password
+
+# basicamente estamos renusiemdo los comandos:
+#docker create -p27017:27017 --network mired -e MONGO_INITDB_ROOT_USERNAME=nico -e MONGO_INITDB_ROOT_PASSWORD=password --name monguito mongo
+#docker create -p3000:3000 --network mired --name chanchito miapp:1
+# en este docker-compose.yml
+
+
+# para levantar los contenedores
+# docker-compose up -d

@@ -62,3 +62,14 @@ docker create --network NAME_NETWORK IMAGE_NAME
 docker create -p27017:27017 --network mired -e MONGO_INITDB_ROOT_USERNAME=nico -e MONGO_INITDB_ROOT_PASSWORD=password --name monguito mongo
 docker create -p3000:3000 --network mired --name chanchito miapp:1
 ``` 
+
+# UP DOCKER COMPOSE
+```
+docker-compose up
+```
+
+
+# DOWN DOCKER COMPOSE
+```
+docker-compose down
+```
