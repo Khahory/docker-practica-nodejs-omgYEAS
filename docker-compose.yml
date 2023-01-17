@@ -24,14 +24,8 @@ services:
     volumes:
       # where does mongodb store data? (GOOGLE IT)
       - mongo-data: /data/db # debemos decirle donde sera montando el volumen en el contenedor
-
-      # where does mysql store data? (GOOGLE IT)
       # mysql -> /var/lib/mysql
-
-      # where does postgresql store data? (GOOGLE IT)
       # postgresql -> /var/lib/postgresql/data
-
-      # where does sqlserver store data? (GOOGLE IT)
       # sqlserver -> /var/opt/mssql/data
 
 # definir volumenes
