@@ -5,7 +5,7 @@ version: '1.0'
 
 #creado servicio (o contenedor)
 services:
-  chanchito:
+  chanchito: # el ejecutable el Dockerfile que esta en root
     build: .
     ports:
       - "3000:3000"
