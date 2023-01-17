@@ -36,3 +36,17 @@ docker run -pPORT_OUR_MACHINE:PORT_APP_CONTAINER --name PERSONAL_NAME2CONTAINER 
 docker create -e ENVIRONMENT_VARIABLE=VALUE_ENVIRONMENT_VARIABLE IMAGE_NAME
 docker create -p27017:27017 -e MONGO_INITDB_ROOT_USERNAME=nico -e MONGO_INITDB_ROOT_PASSWORD=password --name monguito mongo
 ```
+
+# CREATE INTERNAL NETWORK FOR CONTAINERS
+![RED_INTERNA.png](RED_INTERNA.png)
+
+# LIST NETWORKS
+```
+docker network ls
+```
+
+# CREATE NETWORK
+```
+docker network create NAME_NETWORK
+docker network create mired
+```
