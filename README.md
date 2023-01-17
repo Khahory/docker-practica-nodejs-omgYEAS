@@ -88,6 +88,16 @@ for docker-compose.yml
 docker-compose up -d
 ```
 
-# VOLUMES IS FOR PERSTENCE DATA
+# NOTE
+VOLUMES IS FOR PERSTENCE DATA
+
+# CREATE DEVELOPMENT ENVIRONMENT
+1. Create a [Dockerfile.dev](Dockerfile.dev)
+2. Create a [docker-compose-dev.yml](docker-compose-dev.yml)
+
+# RUN DEVELOPMENT ENVIRONMENT
+```
+docker-compose -f docker-compose-dev.yml up
+```
 
 

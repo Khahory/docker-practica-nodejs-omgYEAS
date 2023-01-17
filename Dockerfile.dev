@@ -1,0 +1,15 @@
+#what's base image?
+FROM node:18
+
+# creating directory for the app
+RUN npm i -g nodemon
+RUN mkdir -p /home/app
+
+# setting working directory
+WORKDIR /home/app
+
+# expose port 3000
+EXPOSE 3000
+
+# when the container launches run the following command
+CMD ["nodemon", "index.js"]
