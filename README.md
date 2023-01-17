@@ -30,3 +30,9 @@ docker run IMAGE_NAME (download image and create a container)
 docker run -d IMAGE_NAME (run as daemon)
 docker run -pPORT_OUR_MACHINE:PORT_APP_CONTAINER --name PERSONAL_NAME2CONTAINER IMAGE_NAME 
 ```
+
+# CREATE A CONTAINER WITH A ENVIRONMENT VARIABLE
+```
+docker create -e ENVIRONMENT_VARIABLE=VALUE_ENVIRONMENT_VARIABLE IMAGE_NAME
+docker create -p27017:27017 -e MONGO_INITDB_ROOT_USERNAME=nico -e MONGO_INITDB_ROOT_PASSWORD=password --name monguito mongo
+```
